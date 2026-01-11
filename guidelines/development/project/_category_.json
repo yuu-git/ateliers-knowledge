@@ -1,5 +1,9 @@
 {
   "label": "プロジェクト管理",
   "position": 1,
-  "description": "プロジェクトの構造と管理に関するガイドライン"
+  "description": "プロジェクトの構造と管理に関するガイドライン",
+  "link": {
+    "type": "doc",
+    "id": "ateliers-knowledge/guidelines/development/project/index"
+  }
 }

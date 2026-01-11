@@ -1,5 +1,9 @@
 {
   "label": "C#",
   "position": 1,
-  "description": "C# および .NET 関連のコーディング規約"
+  "description": "C# および .NET 関連のコーディング規約",
+  "link": {
+    "type": "doc",
+    "id": "ateliers-knowledge/guidelines/development/coding/csharp/index"
+  }
 }

@@ -1,5 +1,9 @@
 {
   "label": "開発ガイドライン",
   "position": 1,
-  "description": "プロジェクト横断的な開発方針・設計方針・運用ルールをまとめたガイドラインです。"
+  "description": "プロジェクト横断的な開発方針・設計方針・運用ルールをまとめたガイドラインです。",
+  "link": {
+    "type": "doc",
+    "id": "ateliers-knowledge/guidelines/development/index"
+  }
 }
