@@ -1,11 +1,11 @@
-# ateliers-ai-assistants
+# ateliers-knowledge
 
 > AIアシスタント向けコード生成・テスト生成ガイドライン集
 > GitHub Copilot、Cursor、Claude等のAIツールで利用するためのテキストベースリポジトリ
 
 ## Overview
 
-- **Repository**: https://github.com/yuu-git/ateliers-ai-assistants
+- **Repository**: https://github.com/yuu-git/ateliers-knowledge
 - **Author**: @yuu-git
 - **Language**: Japanese (日本語)
 - **License**: MIT
@@ -26,7 +26,7 @@
 
 ```bash
 # ワンライナーで自動セットアップ
-curl -fsSL https://raw.githubusercontent.com/yuu-git/ateliers-ai-assistants/master/scripts/init-for-project.sh | bash
+curl -fsSL https://raw.githubusercontent.com/yuu-git/ateliers-knowledge/master/scripts/init-for-project.sh | bash
 ```
 
 このスクリプトは以下を自動実行します：
@@ -39,13 +39,13 @@ curl -fsSL https://raw.githubusercontent.com/yuu-git/ateliers-ai-assistants/mast
 
 ```bash
 # サブモジュールとして追加
-git submodule add https://github.com/yuu-git/ateliers-ai-assistants.git .submodules/ateliers-ai-assistants
+git submodule add https://github.com/yuu-git/ateliers-knowledge.git .submodules/ateliers-knowledge
 
 # 初期化と更新
 git submodule update --init --recursive
 
 # masterブランチに切り替え
-cd .submodules/ateliers-ai-assistants
+cd .submodules/ateliers-knowledge
 git checkout master
 git pull origin master
 cd ../..
@@ -69,7 +69,7 @@ cd ../..
 ### Method 3: Direct Command
 
 ```bash
-cd .submodules/ateliers-ai-assistants
+cd .submodules/ateliers-knowledge
 git checkout master
 git pull origin master
 cd ../..
@@ -78,7 +78,7 @@ cd ../..
 ## Directory Structure
 
 ```
-ateliers-ai-assistants/
+ateliers-knowledge/
 ├─ scripts/                              # セットアップ・更新スクリプト
 │  ├─ init-for-project.sh
 │  └─ update-ai-guidelines.sh
@@ -188,10 +188,10 @@ ateliers-ai-assistants/
 
 ```
 # Raw URL（推奨・常に最新版）
-@Docs https://raw.githubusercontent.com/yuu-git/ateliers-ai-assistants/master/llms.txt
+@Docs https://raw.githubusercontent.com/yuu-git/ateliers-knowledge/master/llms.txt
 
 # ローカルのサブモジュール
-@Docs .submodules/ateliers-ai-assistants/llms.txt
+@Docs .submodules/ateliers-knowledge/llms.txt
 ```
 
 ### GitHub Copilot
@@ -209,7 +209,7 @@ ateliers-ai-assistants/
 
 ```
 このリポジトリのガイドラインに従ってください：
-https://raw.githubusercontent.com/yuu-git/ateliers-ai-assistants/master/llms.txt
+https://raw.githubusercontent.com/yuu-git/ateliers-knowledge/master/llms.txt
 ```
 
 ## Branch Strategy
@@ -275,7 +275,7 @@ ai-generation-guidelines/
 ## Contact
 
 - GitHub: [@yuu-git](https://github.com/yuu-git)
-- Repository: https://github.com/yuu-git/ateliers-ai-assistants
+- Repository: https://github.com/yuu-git/ateliers-knowledge
 
 ## Notes
 

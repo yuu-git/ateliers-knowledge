@@ -1,4 +1,4 @@
-﻿# ateliers-ai-assistants プロジェクトについて
+﻿# ateliers-knowledge プロジェクトについて
 
 Ateliers.Core.AIAssistant プロジェクトは、AIアシスタントの機能を提供するためのプロジェクトです。
 

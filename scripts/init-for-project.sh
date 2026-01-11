@@ -1,17 +1,17 @@
 #!/bin/bash
 
 #######################################
-# ateliers-ai-assistants 初回セットアップスクリプト
+# ateliers-knowledge 初回セットアップスクリプト
 # 
 # 使用方法:
-#   curl -fsSL https://raw.githubusercontent.com/yuu-git/ateliers-ai-assistants/master/scripts/init-for-project.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/yuu-git/ateliers-knowledge/master/scripts/init-for-project.sh | bash
 #######################################
 
 set -e
 
 # 設定
-REPO_URL="https://github.com/yuu-git/ateliers-ai-assistants.git"
-SUBMODULE_PATH=".submodules/ateliers-ai-assistants"
+REPO_URL="https://github.com/yuu-git/ateliers-knowledge.git"
+SUBMODULE_PATH=".submodules/ateliers-knowledge"
 SCRIPTS_DIR="scripts"
 
 # カラー出力
@@ -21,7 +21,7 @@ YELLOW='\033[1;33m'
 NC='\033[0m'
 
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${BLUE}  ateliers-ai-assistants セットアップ${NC}"
+echo -e "${BLUE}  ateliers-knowledge セットアップ${NC}"
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 
@@ -116,5 +116,5 @@ if [[ "$response" =~ ^[Yy]$ ]]; then
     echo "    手動実行: GitHub > Actions > Update AI Guidelines > Run workflow"
     echo ""
 fi
-echo "詳細: https://github.com/yuu-git/ateliers-ai-assistants"
+echo "詳細: https://github.com/yuu-git/ateliers-knowledge"
 echo ""

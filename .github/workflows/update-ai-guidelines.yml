@@ -24,7 +24,7 @@ jobs:
       
       - name: Update submodule to latest
         run: |
-          git submodule update --remote --merge .submodules/ateliers-ai-assistants
+          git submodule update --remote --merge .submodules/ateliers-knowledge
       
       - name: Check for changes
         id: check_changes
@@ -42,7 +42,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .submodules/ateliers-ai-assistants
+          git add .submodules/ateliers-knowledge
           git commit -m "chore: update AI guidelines submodule"
           git push
       
@@ -53,7 +53,7 @@ jobs:
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "更新内容を確認するには:" >> $GITHUB_STEP_SUMMARY
             echo '```bash' >> $GITHUB_STEP_SUMMARY
-            echo "cd .submodules/ateliers-ai-assistants" >> $GITHUB_STEP_SUMMARY
+            echo "cd .submodules/ateliers-knowledge" >> $GITHUB_STEP_SUMMARY
             echo "git log --oneline -5" >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
           else

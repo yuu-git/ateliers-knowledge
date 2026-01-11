@@ -1,4 +1,4 @@
-# ateliers-ai-assistants
+# ateliers-knowledge
 
 このリポジトリは、AIによる自動コード生成や学習を行うための資材を提供するプロジェクトです。  
 コードベースではなく、テキストベースのリポジトリになります。
@@ -10,7 +10,7 @@
 最も簡単な方法です。1コマンドでセットアップが完了します。
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/yuu-git/ateliers-ai-assistants/master/scripts/init-for-project.sh | bash
+curl -fsSL https://raw.githubusercontent.com/yuu-git/ateliers-knowledge/master/scripts/init-for-project.sh | bash
 ```
 
 このスクリプトは以下を自動実行します：
@@ -25,20 +25,20 @@ curl -fsSL https://raw.githubusercontent.com/yuu-git/ateliers-ai-assistants/mast
 
 ```bash
 # 1. サブモジュールとして追加
-git submodule add https://github.com/yuu-git/ateliers-ai-assistants.git .submodules/ateliers-ai-assistants
+git submodule add https://github.com/yuu-git/ateliers-knowledge.git .submodules/ateliers-knowledge
 
 # 2. サブモジュールを初期化
 git submodule update --init --recursive
 
 # 3. masterブランチに切り替え
-cd .submodules/ateliers-ai-assistants
+cd .submodules/ateliers-knowledge
 git checkout master
 git pull origin master
 cd ../..
 
 # 4. 更新スクリプトをコピー（オプション）
 mkdir -p scripts
-cp .submodules/ateliers-ai-assistants/scripts/update-ai-guidelines.sh scripts/
+cp .submodules/ateliers-knowledge/scripts/update-ai-guidelines.sh scripts/
 chmod +x scripts/update-ai-guidelines.sh
 ```
 
@@ -59,7 +59,7 @@ chmod +x scripts/update-ai-guidelines.sh
 ```bash
 # ワークフローファイルをコピー
 mkdir -p .github/workflows
-cp .submodules/ateliers-ai-assistants/.github/workflows/update-ai-guidelines.yml .github/workflows/
+cp .submodules/ateliers-knowledge/.github/workflows/update-ai-guidelines.yml .github/workflows/
 ```
 
 手動実行も可能：
@@ -72,7 +72,7 @@ cp .submodules/ateliers-ai-assistants/.github/workflows/update-ai-guidelines.yml
 サブモジュールディレクトリで直接実行します。
 
 ```bash
-cd .submodules/ateliers-ai-assistants
+cd .submodules/ateliers-knowledge
 git checkout master
 git pull origin master
 cd ../..
@@ -83,18 +83,18 @@ cd ../..
 ### Cursor / Cline
 
 ```
-@Docs .submodules/ateliers-ai-assistants/llms.txt
+@Docs .submodules/ateliers-knowledge/llms.txt
 ```
 
 または、GitHub上のファイルを直接参照：
 
 ```
-@Docs https://raw.githubusercontent.com/yuu-git/ateliers-ai-assistants/master/llms.txt
+https://raw.githubusercontent.com/yuu-git/ateliers-knowledge/master/llms.txt
 ```
 
 ### GitHub Copilot
 
-`.submodules/ateliers-ai-assistants` 内のファイルを開くことでコンテキストとして認識されます。
+`.submodules/ateliers-knowledge` 内のファイルを開くことでコンテキストとして認識されます。
 
 主要ファイル：
 - `ai-generation-guidelines/by-language/csharp/test-generation/xunit.md`
@@ -107,7 +107,7 @@ cd ../..
 
 ```
 このリポジトリのガイドラインに従ってください：
-https://raw.githubusercontent.com/yuu-git/ateliers-ai-assistants/master/llms.txt
+https://raw.githubusercontent.com/yuu-git/ateliers-knowledge/master/llms.txt
 ```
 
 ## 📚 コンテンツ
@@ -259,7 +259,7 @@ ateliers-ai-assistants/
 ## 📞 Contact
 
 - GitHub: [@yuu-git](https://github.com/yuu-git)
-- Repository: https://github.com/yuu-git/ateliers-ai-assistants
+- Repository: https://github.com/yuu-git/ateliers-knowledge
 
 ## 📝 Notes
 

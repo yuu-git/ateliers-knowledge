@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #######################################
-# ateliers-ai-assistants 更新スクリプト
+# ateliers-knowledge 更新スクリプト
 # 
 # 使用方法:
 #   ./scripts/update-ai-guidelines.sh
@@ -10,7 +10,7 @@
 set -e
 
 # 設定
-SUBMODULE_PATH=".submodules/ateliers-ai-assistants"
+SUBMODULE_PATH=".submodules/ateliers-knowledge"
 BRANCH="master"
 
 # カラー出力
@@ -26,7 +26,7 @@ echo ""
 if [ ! -d "$SUBMODULE_PATH" ]; then
     echo -e "${YELLOW}⚠️  エラー: サブモジュールが見つかりません${NC}"
     echo "   先にセットアップを実行してください:"
-    echo "   curl -fsSL https://raw.githubusercontent.com/yuu-git/ateliers-ai-assistants/master/scripts/init-for-project.sh | bash"
+    echo "   curl -fsSL https://raw.githubusercontent.com/yuu-git/ateliers-knowledge/master/scripts/init-for-project.sh | bash"
     exit 1
 fi
 
