@@ -1,18 +1,25 @@
+---
+title: コーディングガイドライン
+sidebar_position: 0
+---
+
 # コーディングガイドライン
 
-コーディング規約・設計方針のガイドラインです。
+コーディング・設計方針（命名、例外設計、設計原則など）のガイドラインを格納しています。
 
-## ディレクトリ構成
+## C# および .NET 関連
 
-- **[csharp/](csharp/)** - C# および .NET 関連のコーディング規約
+### 命名規則
+- [名前空間の命名方針](csharp/names-of-namespaces.md)
 
-## 将来追加予定
+### 設計原則
+- *(将来追加予定)*
 
-- 例外設計ガイドライン
-- LINQ 使用ガイドライン
-- 非同期プログラミング規約
+### テスト戦略
+- *(将来追加予定)*
 
-## 関連リソース
+## 関連ドキュメント
 
-- [AI 生成ガイドライン - C#](../../../ai-generation-guidelines/by-language/csharp/)
-- [AI トレーニングサンプル - C#](../../../ai-training-samples/codes/csharp/)
+- [開発ガイドライン](../README.md)
+- [GitHub ガイドライン](../github/README.md)
+- [AI 生成ガイドライン](../../ai-generation-guidelines/)
