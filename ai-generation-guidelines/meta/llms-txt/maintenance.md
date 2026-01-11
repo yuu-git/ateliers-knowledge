@@ -208,8 +208,8 @@ llms.txt の構造や内容について質問・提案がある場合：
 ## 🔗 関連ドキュメント
 
 - [README.md](../../README.md): リポジトリの基本情報
-- [Project Info](../../docs/project-info.md): プロジェクト構造の詳細
 - [llms.txt](../../llms.txt): 実際のファイル
+- [Image Management](../../guidelines/image-management-guide.md): 画像ファイル管理ガイドライン
 
 ---
 

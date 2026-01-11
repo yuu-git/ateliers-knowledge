@@ -668,8 +668,8 @@ See [maintenance.md](ai-generation-guidelines/meta/llms-txt/maintenance.md) for 
 
 Consult these files:
 - [README.md](README.md): Installation and basic usage
-- [docs/project-info.md](docs/project-info.md): Detailed project structure
 - [llms.txt](llms.txt): Quick reference for AI tools
+- [guidelines/image-management-guide.md](guidelines/image-management-guide.md): Image file management
 
 ---
 

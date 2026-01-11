@@ -19,6 +19,7 @@
 - ✅ **AI 最適化**: LLM が読み取りやすい構造と `llms.txt` による統合
 - ✅ **サブモジュール設計**: Git サブモジュールとして各プロジェクトに組み込み
 - ✅ **多言語対応**: C#、PowerShell、YAML、Lua など複数言語をサポート
+- ✅ **画像管理**: 固有画像は `img/`、共通画像は `.assets/` で整理
 
 ## 📦 インストール方法
 
@@ -131,6 +132,17 @@ https://raw.githubusercontent.com/yuu-git/ateliers-knowledge/master/llms.txt
 
 ### 現在のコンテンツ
 
+#### 開発ガイドライン（`guidelines/development/`）
+
+プロジェクト横断的な開発ガイドライン：
+
+**GitHub 運用**:
+- [リポジトリ命名方針](guidelines/development/github/repository-naming-policy.md)
+- [ドキュメント作成ガイド](guidelines/development/github/writing-guide.md)
+
+**C# コーディング規約**:
+- [名前空間の命名方針](guidelines/development/coding/csharp/names-of-namespaces.md)
+
 #### AI 生成ガイドライン（`ai-generation-guidelines/`）
 
 AI による自動コード生成のためのガイドライン集：
@@ -155,13 +167,11 @@ AI の学習用コードサンプル：
 
 ### 今後追加予定のコンテンツ
 
-#### 開発ガイドライン（`guidelines/development/`）
-
-プロジェクト横断的な開発ガイドライン：
-- GitHub リポジトリ命名規則
-- C# コーディング規約
+#### 開発ガイドラインの拡充
+- バージョニング戦略
+- アーキテクチャ指針
 - コミットメッセージ規約
-- ブランチ戦略
+- C# 例外設計・LINQ ガイドライン
 
 #### ベストプラクティス（`practices/`）
 
@@ -228,8 +238,11 @@ ateliers-knowledge/
 │  ├─ cursor/
 │  └─ claude/
 │
-├─ docs/                                 # プロジェクト文書
-│  └─ project-info.md                   # プロジェクト詳細
+├─ .assets/                              # 共通画像（複数ドキュメントから参照）
+│  ├─ icons/                            # アイコン
+│  ├─ diagrams/                         # 図表
+│  ├─ screenshots/                      # スクリーンショット
+│  └─ logos/                            # ロゴ
 │
 ├─ README.md                             # このファイル
 ├─ llms.txt                              # AI 向けコンテキスト

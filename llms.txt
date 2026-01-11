@@ -88,11 +88,28 @@ cd ../..
 
 ```
 ateliers-knowledge/
-├─ scripts/                              # セットアップ・更新スクリプト
-│  ├─ init-for-project.sh
-│  └─ update-ai-guidelines.sh
+├─ guidelines/                           # 開発ガイドライン（2026-01追加）
+│  └─ development/
+│     ├─ github/                        # GitHub 運用
+│     └─ coding/                        # コーディング規約
+│        └─ csharp/
+├─ ai-generation-guidelines/             # AI 生成用ガイドライン
+│  ├─ fundamentals/
+│  ├─ by-language/
+│  │  ├─ csharp/
+│  │  ├─ powershell/
+│  │  ├─ yaml/
+│  │  └─ lua/
+│  ├─ by-framework/
+│  ├─ by-tool/
+│  └─ meta/
+├─ ai-training-samples/                  # AI トレーニング用サンプル
+│  └─ codes/
+├─ tool-specific/                        # ツール固有設定
+├─ scripts/                              # セットアップスクリプト
 ├─ .github/workflows/                    # GitHub Actions
-│  └─ update-ai-guidelines.yml
+└─ docs/                                 # プロジェクト文書
+```
 ├─ ai-generation-guidelines/             # AI生成用ガイドライン
 │  ├─ fundamentals/                     # 基本原則（言語非依存）
 │  ├─ by-language/                      # 言語別ガイドライン
@@ -121,6 +138,17 @@ ateliers-knowledge/
 ```
 
 ## Core Guidelines
+
+### 📋 Development Guidelines (開発ガイドライン - 2026-01 追加)
+
+プロジェクト横断的な開発方針・規約：
+
+**GitHub 運用**:
+- [Repository Naming Policy](guidelines/development/github/repository-naming-policy.md): リポジトリ命名方針
+- [Writing Guide](guidelines/development/github/writing-guide.md): ドキュメント作成ガイド
+
+**C# コーディング規約**:
+- [Namespace Naming](guidelines/development/coding/csharp/names-of-namespaces.md): 名前空間の命名方針
 
 ### 🎯 Fundamentals (言語非依存の基本原則)
 
@@ -296,7 +324,7 @@ ai-generation-guidelines/
 ## Project Documentation
 
 - [README](README.md): リポジトリの基本情報と使い方
-- [Project Info](docs/project-info.md): プロジェクト構造の詳細説明
+- [Image Management](guidelines/image-management-guide.md): 画像ファイル管理ガイドライン
 
 ---
 
