@@ -1,24 +1,33 @@
 # ateliers-knowledge
 
-> AIアシスタント向けコード生成・テスト生成ガイドライン集
-> GitHub Copilot、Cursor、Claude等のAIツールで利用するためのテキストベースリポジトリ
+> Ateliers プロジェクトのナレッジベース - AI 駆動開発とドキュメント駆動開発を支える知識リポジトリ
+> GitHub Copilot、Cursor、Claude 等の AI ツールで利用可能なテキストベースリポジトリ
 
 ## Overview
 
 - **Repository**: https://github.com/yuu-git/ateliers-knowledge
+- **Former Name**: ateliers-ai-assistants (2026-01-11 にリネーム)
 - **Author**: @yuu-git
 - **Language**: Japanese (日本語)
 - **License**: MIT
-- **Type**: Text-based guidelines and samples
+- **Type**: Text-based guidelines, samples, and best practices
 - **Primary Use**: Git Submodule
-- **Last Updated**: 2025-11-15 (Multi-language AI-agnostic structure)
+- **Last Updated**: 2026-01-11 (Renamed and expanded scope)
 
 ## Purpose
 
-このリポジトリは、AIによる自動コード生成・テスト生成を支援するためのガイドラインとサンプルを提供します。
-特にC#とxUnitを使用した開発において、一貫性のあるコード品質を保つための規約を定義しています。
+このリポジトリは以下の目的で運用されます：
 
-2025年11月に大規模な構造見直しを実施し、AIツール非依存・多言語対応の設計に移行しました。
+1. **AI 駆動開発の支援**: AI による自動コード生成・テスト生成のためのガイドラインとサンプル
+2. **ドキュメント駆動開発**: プロジェクト横断的な開発ガイドライン・ベストプラクティスの一元管理
+3. **再利用可能なナレッジ**: サブモジュールとして各プロジェクトから参照可能
+4. **Docusaurus 統合**: 静的サイト生成による技術文書の公開
+
+特に C# と xUnit を使用した開発において、一貫性のあるコード品質を保つための規約を定義しています。
+
+**主な変更履歴**:
+- 2025-11: AI ツール非依存・多言語対応の構造に全面改訂
+- 2026-01: `ateliers-knowledge` にリネーム、開発ガイドラインの統合開始
 
 ## Installation
 

@@ -1,7 +1,24 @@
 # ateliers-knowledge
 
-このリポジトリは、AIによる自動コード生成や学習を行うための資材を提供するプロジェクトです。  
-コードベースではなく、テキストベースのリポジトリになります。
+**Ateliers プロジェクト全体のナレッジベース - AI駆動開発とドキュメント駆動開発を支える知識リポジトリ**
+
+このリポジトリは、AI による自動コード生成・学習のためのガイドラインとサンプル、および Ateliers プロジェクト全体の開発ガイドライン・ベストプラクティスを提供します。
+
+## 📖 このリポジトリについて
+
+### 目的
+
+1. **AI 駆動開発の支援**: GitHub Copilot、Cursor、Claude などの AI ツールで参照可能なガイドライン
+2. **ドキュメント駆動開発**: プロジェクト横断的な開発方針・ガイドラインの一元管理
+3. **再利用可能なナレッジ**: サブモジュールとして各プロジェクトから参照可能
+4. **Docusaurus 統合**: 静的サイト生成による技術文書の公開
+
+### 特徴
+
+- ✅ **テキストベース**: 実行可能なコードではなく、マークダウン形式のガイドライン
+- ✅ **AI 最適化**: LLM が読み取りやすい構造と `llms.txt` による統合
+- ✅ **サブモジュール設計**: Git サブモジュールとして各プロジェクトに組み込み
+- ✅ **多言語対応**: C#、PowerShell、YAML、Lua など複数言語をサポート
 
 ## 📦 インストール方法
 
@@ -112,35 +129,51 @@ https://raw.githubusercontent.com/yuu-git/ateliers-knowledge/master/llms.txt
 
 ## 📚 コンテンツ
 
-### AI生成ガイドライン
+### 現在のコンテンツ
 
-#### テスト生成（最重要）
+#### AI 生成ガイドライン（`ai-generation-guidelines/`）
 
+AI による自動コード生成のためのガイドライン集：
+
+**テスト生成（最重要）**:
 - [xUnit Test Guidelines](ai-generation-guidelines/by-language/csharp/test-generation/xunit.md)
-  - テスト命名規則（`TESTNAME_XXX_XXXXX`形式）
+  - テスト命名規則（`TESTNAME_XXX_XXXXX` 形式）
   - partial class による自動生成と手動テストの共存
   - nameof() を使用したリファクタリング対応
-  - カバレッジ100%を目指すテスト観点
+  - カバレッジ 100% を目指すテスト観点
 
-#### コードレビュー（参考用）
-
-**注意**: 2024/03/17時点でGitHub Copilotはコードレビューガイドラインをまだサポートしていません
-
+**コードレビュー**:
 - [Code Quality Principles](ai-generation-guidelines/fundamentals/code-quality-principles.md): 全コードに適用される基本原則
-- [ValueObject Review Guidelines](ai-generation-guidelines/by-language/csharp/code-review/value-object.md): DDD値オブジェクト向けレビュー基準
+- [ValueObject Review Guidelines](ai-generation-guidelines/by-language/csharp/code-review/value-object.md): DDD 値オブジェクト向けレビュー基準
 
-### AIトレーニングサンプル
+#### AI トレーニングサンプル（`ai-training-samples/`）
 
-#### C# コードパターン
-
-- [Common Patterns](ai-training-samples/codes/csharp/common-patterns.md): C#の基本パターン（null チェック等）
-- [LINQ Patterns](ai-training-samples/codes/csharp/linq-patterns.md): LINQの推奨パターン
+AI の学習用コードサンプル：
+- [Common Patterns](ai-training-samples/codes/csharp/common-patterns.md): C# の基本パターン
+- [LINQ Patterns](ai-training-samples/codes/csharp/linq-patterns.md): LINQ の推奨パターン
 - [DateTime Extensions Example](ai-training-samples/codes/csharp/datetime-extensions.md): 実装とテストの完全なサンプル
+
+### 今後追加予定のコンテンツ
+
+#### 開発ガイドライン（`guidelines/development/`）
+
+プロジェクト横断的な開発ガイドライン：
+- GitHub リポジトリ命名規則
+- C# コーディング規約
+- コミットメッセージ規約
+- ブランチ戦略
+
+#### ベストプラクティス（`practices/`）
+
+実践的なハウツーと技術解説：
+- .NET GitHub Actions 設定
+- HTTP プロトコル基礎
+- Git 運用テクニック
 
 ## 📂 ディレクトリ構造
 
 ```
-ateliers-ai-assistants/
+ateliers-knowledge/
 ├─ scripts/                              # セットアップ・更新スクリプト
 │  ├─ init-for-project.sh               # 初回セットアップ
 │  └─ update-ai-guidelines.sh           # 手動更新
@@ -148,7 +181,7 @@ ateliers-ai-assistants/
 ├─ .github/workflows/                    # GitHub Actions
 │  └─ update-ai-guidelines.yml          # 自動更新ワークフロー
 │
-├─ ai-generation-guidelines/             # AI生成用ガイドライン
+├─ ai-generation-guidelines/             # AI 生成用ガイドライン
 │  ├─ fundamentals/                     # 基本原則（言語非依存）
 │  │  ├─ naming-conventions.md
 │  │  ├─ documentation-standards.md
@@ -180,19 +213,15 @@ ateliers-ai-assistants/
 │     └─ llms-txt/
 │        └─ maintenance.md             # llms.txt メンテナンスガイド
 │
-├─ ai-training-samples/                  # AIトレーニング用サンプル
-│  ├─ codes/                            # コードサンプル
-│  │  ├─ csharp/
-│  │  │  ├─ common-patterns.md
-│  │  │  ├─ linq-patterns.md
-│  │  │  └─ datetime-extensions.md
-│  │  ├─ powershell/
-│  │  ├─ yaml/
-│  │  └─ lua/
-│  │
-│  ├─ configs/                          # 設定ファイルサンプル（将来）
-│  ├─ documents/                        # ドキュメントサンプル（将来）
-│  └─ data/                             # データサンプル（将来）
+├─ ai-training-samples/                  # AI トレーニング用サンプル
+│  └─ codes/                            # コードサンプル
+│     ├─ csharp/
+│     │  ├─ common-patterns.md
+│     │  ├─ linq-patterns.md
+│     │  └─ datetime-extensions.md
+│     ├─ powershell/
+│     ├─ yaml/
+│     └─ lua/
 │
 ├─ tool-specific/                        # ツール固有設定
 │  ├─ github-copilot/
@@ -200,32 +229,29 @@ ateliers-ai-assistants/
 │  └─ claude/
 │
 ├─ docs/                                 # プロジェクト文書
-│  ├─ project-info.md                   # プロジェクト詳細
-│  └─ alternatives/                     # 代替方法の解説
+│  └─ project-info.md                   # プロジェクト詳細
 │
 ├─ README.md                             # このファイル
-├─ llms.txt                              # AI向けコンテキスト
+├─ llms.txt                              # AI 向けコンテキスト
 └─ LICENSE.txt                           # MIT ライセンス
 ```
 
-### 構造の特徴
+### 今後追加予定の構造
 
-#### 1. AI生成用ガイドライン（`ai-generation-guidelines/`）
-
-- **fundamentals/**: 言語非依存の基本原則
-- **by-language/**: 言語別のガイドライン（C#, PowerShell, YAML, Lua等）
-- **by-framework/**: フレームワーク固有のガイドライン
-- **by-tool/**: ツール固有のガイドライン（Git, Docker等）
-- **meta/**: llms.txt などのメタ情報管理
-
-#### 2. AIトレーニングサンプル（`ai-training-samples/`）
-
-- **codes/**: プログラミング言語別のコードサンプル
-- **configs/**: 設定ファイルのサンプル（将来追加予定）
-- **documents/**: ドキュメントのサンプル（将来追加予定）
-- **data/**: データファイルのサンプル（将来追加予定）
-
-この構造により、新しい言語やツールの追加が容易になり、AIツールが目的のガイドラインを見つけやすくなっています。
+```
+ateliers-knowledge/
+├─ guidelines/                           # 開発ガイドライン（追加予定）
+│  ├─ development/                      # 開発方針
+│  │  ├─ github/                       # GitHub 運用
+│  │  └─ coding/                       # コーディング規約
+│  ├─ versioning/                       # バージョニング戦略
+│  └─ architecture/                     # アーキテクチャ指針
+│
+└─ practices/                            # ベストプラクティス（追加予定）
+   ├─ dotnet/                           # .NET 関連
+   ├─ git/                              # Git 運用
+   └─ ai/                               # AI 活用方法
+```
 
 ## 🌿 ブランチ戦略
 
@@ -241,20 +267,26 @@ ateliers-ai-assistants/
 
 ## 🔮 今後の予定
 
-以下のガイドラインは将来的に追加予定です：
+### コンテンツ追加
 
-### 言語別ガイドライン
-- **JavaScript/TypeScript**: React, Node.js等のパターン
+#### 開発ガイドラインの統合
+- ateliers-dev からの `development-guidelines` 移行
+- GitHub 運用ガイドライン（リポジトリ命名、ブランチ戦略）
+- C# コーディング規約（名前空間、例外設計）
+- バージョニング戦略
+
+#### ベストプラクティスの充実
+- .NET GitHub Actions パターン集
+- HTTP プロトコル詳細解説
+- Git タグ運用ガイド
+
+#### 多言語対応の拡張
+- **JavaScript/TypeScript**: React、Node.js のパターン
 - **Python**: pytest を使用したテストパターン
 
-### フレームワーク別ガイドライン
-- **.NET**: ASP.NET Core, Blazor, Entity Framework
-- **React**: コンポーネント設計、Hooks パターン
-
-### ツール別ガイドライン
-- **Git**: コミットメッセージ規約、ブランチ戦略
-- **Docker**: Dockerfile ベストプラクティス
-- **CI/CD**: GitHub Actions, Azure DevOps
+### Docusaurus 統合
+- サブモジュールとして ateliers-dev から参照
+- 静的サイトとしての技術文書公開
 
 ## 📞 Contact
 
@@ -263,10 +295,11 @@ ateliers-ai-assistants/
 
 ## 📝 Notes
 
-- このリポジトリは**テキストベース**であり、実行可能なコードは含まれません
-- パッケージではなく**サブモジュール**として利用することを想定しています
-- AIツールが `.md` ファイルを直接参照できるように設計されています
-- 2025年11月に大規模なディレクトリ構造の見直しを実施（AI非依存の設計）
+- このリポジトリは **テキストベース** であり、実行可能なコードは含まれません
+- パッケージではなく **サブモジュール** として利用することを想定しています
+- AI ツールが `.md` ファイルを直接参照できるように設計されています
+- 2025年11月: AI ツール非依存・多言語対応の構造に全面改訂
+- 2026年1月: `ateliers-knowledge` にリポジトリ名変更、開発ガイドラインの統合開始
 
 ## 📄 License
 
@@ -274,5 +307,6 @@ MIT License - see [LICENSE.txt](LICENSE.txt)
 
 ---
 
-*Last Updated: 2025-11-15*  
-*Structure: Multi-language AI-agnostic design*
+*Last Updated: 2026-01-11*  
+*Repository: ateliers-knowledge (formerly ateliers-ai-assistants)*  
+*Purpose: AI-driven & Documentation-driven development knowledge base*
