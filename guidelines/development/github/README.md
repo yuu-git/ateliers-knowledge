@@ -1,4 +1,4 @@
----
+﻿---
 title: GitHub ガイドライン
 sidebar_position: 0
 ---
@@ -12,6 +12,7 @@ GitHub の個人的な使用方針に関するドキュメントです。
 
 - [リポジトリ命名方針](repository-naming-policy.md)
 - [ドキュメント作成ガイド](writing-guide.md)
+- [CI/CD ガイドライン](cicd/README.md)
 
 ## 関連リンク
 

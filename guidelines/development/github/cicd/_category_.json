@@ -1,0 +1,8 @@
+﻿{
+  "label": "CI/CD",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "GitHub Actions を使った CI/CD パイプラインの運用方針と実装パターンです。"
+  }
+}
