@@ -6,6 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include=".github\docs\README.md" />
+    <None Include=".github\docs\workflows\update-ateliers-knowledge.md" />
+    <None Include=".github\workflows\update-ateliers-knowledge.yml" />
+  </ItemGroup>
+
   <!-- このファイルは Visual Studio からのドキュメント参照用です。基本的にソースの追加はありません。 -->
 
 </Project>

@@ -1,4 +1,4 @@
-# ateliers-knowledge
+﻿# ateliers-knowledge
 
 **Ateliers プロジェクト全体のナレッジベース - AI駆動開発とドキュメント駆動開発を支える知識リポジトリ**
 
@@ -27,8 +27,14 @@
 
 最も簡単な方法です。1コマンドでセットアップが完了します。
 
+**bash:**
 ```bash
 curl -fsSL https://raw.githubusercontent.com/yuu-git/ateliers-knowledge/master/scripts/init-for-project.sh | bash
+```
+
+**PowerShell:**
+```powershell
+irm https://raw.githubusercontent.com/yuu-git/ateliers-knowledge/master/scripts/init-for-project.ps1 | iex
 ```
 
 このスクリプトは以下を自動実行します：
@@ -56,8 +62,9 @@ cd ../..
 
 # 4. 更新スクリプトをコピー（オプション）
 mkdir -p scripts
-cp .submodules/ateliers-knowledge/scripts/update-ai-guidelines.sh scripts/
-chmod +x scripts/update-ai-guidelines.sh
+cp .submodules/ateliers-knowledge/scripts/update-ateliers-knowledge.sh scripts/
+cp .submodules/ateliers-knowledge/scripts/update-ateliers-knowledge.ps1 scripts/
+chmod +x scripts/update-ateliers-knowledge.sh
 ```
 
 ## 🔄 更新方法
@@ -66,23 +73,29 @@ chmod +x scripts/update-ai-guidelines.sh
 
 必要な時に手動で更新します。
 
+**bash:**
 ```bash
-./scripts/update-ai-guidelines.sh
+./scripts/update-ateliers-knowledge.sh
+```
+
+**PowerShell:**
+```powershell
+.\scripts\update-ateliers-knowledge.ps1
 ```
 
 ### 方法2：GitHub Actions（自動更新）
 
-毎週月曜日9時に自動で更新されます。
+毎日9時に自動で更新されます。
 
 ```bash
 # ワークフローファイルをコピー
 mkdir -p .github/workflows
-cp .submodules/ateliers-knowledge/.github/workflows/update-ai-guidelines.yml .github/workflows/
+cp .submodules/ateliers-knowledge/.github/workflows/update-ateliers-knowledge.yml .github/workflows/
 ```
 
 手動実行も可能：
 1. GitHub リポジトリの「Actions」タブを開く
-2. 「Update AI Guidelines」を選択
+2. 「Update Ateliers Knowledge」を選択
 3. 「Run workflow」をクリック
 
 ### 方法3：直接コマンド
@@ -139,6 +152,7 @@ https://raw.githubusercontent.com/yuu-git/ateliers-knowledge/master/llms.txt
 **GitHub 運用**:
 - [リポジトリ命名方針](guidelines/development/github/repository-naming-policy.md)
 - [ドキュメント作成ガイド](guidelines/development/github/writing-guide.md)
+- [CI/CD ガイドライン](guidelines/development/github/cicd/README.md)
 
 **C# コーディング規約**:
 - [名前空間の命名方針](guidelines/development/coding/csharp/names-of-namespaces.md)
@@ -178,18 +192,20 @@ AI の学習用コードサンプル：
 実践的なハウツーと技術解説：
 - .NET GitHub Actions 設定
 - HTTP プロトコル基礎
-- Git 運用テクニック
+- Git運用テクニック
 
 ## 📂 ディレクトリ構造
 
 ```
 ateliers-knowledge/
 ├─ scripts/                              # セットアップ・更新スクリプト
-│  ├─ init-for-project.sh               # 初回セットアップ
-│  └─ update-ai-guidelines.sh           # 手動更新
+│  ├─ init-for-project.sh               # 初回セットアップ (bash)
+│  ├─ init-for-project.ps1              # 初回セットアップ (PowerShell)
+│  ├─ update-ateliers-knowledge.sh      # 手動更新 (bash)
+│  └─ update-ateliers-knowledge.ps1     # 手動更新 (PowerShell)
 │
 ├─ .github/workflows/                    # GitHub Actions
-│  └─ update-ai-guidelines.yml          # 自動更新ワークフロー
+│  └─ update-ateliers-knowledge.yml     # 自動更新ワークフロー
 │
 ├─ ai-generation-guidelines/             # AI 生成用ガイドライン
 │  ├─ fundamentals/                     # 基本原則（言語非依存）
@@ -233,6 +249,19 @@ ateliers-knowledge/
 │     ├─ yaml/
 │     └─ lua/
 │
+├─ guidelines/                           # 開発ガイドライン
+│  └─ development/                      # 開発方針
+│     ├─ github/                       # GitHub 運用
+│     │  ├─ repository-naming-policy.md
+│     │  ├─ writing-guide.md
+│     │  └─ cicd/                      # CI/CD ガイドライン
+│     │     ├─ README.md
+│     │     ├─ submodules-auto-sync.md
+│     │     └─ project-knowledge-sync.md
+│     ├─ coding/                       # コーディング規約
+│     │  └─ csharp/                    # C# 規約
+│     └─ project/                      # プロジェクト管理
+│
 ├─ tool-specific/                        # ツール固有設定
 │  ├─ github-copilot/
 │  ├─ cursor/
@@ -262,7 +291,7 @@ ateliers-knowledge/
 │
 └─ practices/                            # ベストプラクティス（追加予定）
    ├─ dotnet/                           # .NET 関連
-   ├─ git/                              # Git 運用
+   ├─ git/                              # Git運用
    └─ ai/                               # AI 活用方法
 ```
 

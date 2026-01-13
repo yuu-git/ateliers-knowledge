@@ -1,10 +1,10 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 #######################################
-# ateliers-knowledge 更新スクリプト
+# ateliers-knowledge 更新スクリプト (bash版)
 # 
 # 使用方法:
-#   ./scripts/update-ai-guidelines.sh
+#   ./scripts/update-ateliers-knowledge.sh
 #######################################
 
 set -e
@@ -19,7 +19,7 @@ BLUE='\033[0;34m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
 
-echo -e "${BLUE}🔄 AI Guidelines を更新中...${NC}"
+echo -e "${BLUE}🔄 Knowledge を更新中...${NC}"
 echo ""
 
 # サブモジュールの存在確認
@@ -31,7 +31,7 @@ if [ ! -d "$SUBMODULE_PATH" ]; then
 fi
 
 # サブモジュールディレクトリに移動
-cd "$SUBMODULE_PATH" || exit 1
+cd "$SUBMODULE_PATH"
 
 # 現在のブランチを確認
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
@@ -53,9 +53,6 @@ git pull origin "$BRANCH"
 # 更新後のコミットハッシュを取得
 NEW_COMMIT=$(git rev-parse --short HEAD)
 
-# 元のディレクトリに戻る
-cd ../..
-
 echo ""
 if [ "$OLD_COMMIT" != "$NEW_COMMIT" ]; then
     echo -e "${GREEN}✅ 更新完了！${NC}"
@@ -64,7 +61,8 @@ if [ "$OLD_COMMIT" != "$NEW_COMMIT" ]; then
     echo "  $OLD_COMMIT → $NEW_COMMIT"
     echo ""
     echo "詳細を確認:"
-    echo "  cd $SUBMODULE_PATH && git log $OLD_COMMIT..$NEW_COMMIT --oneline"
+    echo "  cd $SUBMODULE_PATH"
+    echo "  git log $OLD_COMMIT..$NEW_COMMIT --oneline"
 else
     echo -e "${GREEN}✅ 既に最新版です${NC}"
 fi
@@ -72,5 +70,9 @@ fi
 echo ""
 echo "参照ファイル:"
 echo "  - $SUBMODULE_PATH/llms.txt"
-echo "  - $SUBMODULE_PATH/GitHubCopilot/**/*.md"
+echo "  - $SUBMODULE_PATH/guidelines/**/*.md"
+echo "  - $SUBMODULE_PATH/ai-generation-guidelines/**/*.md"
 echo ""
+
+# 元のディレクトリに戻る
+cd - > /dev/null
